@@ -2,5 +2,6 @@
 {
     public class ATM
     {
+        public static List<Bank> Banks { get; } = [];
     }
 }

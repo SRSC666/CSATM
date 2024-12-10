@@ -1,9 +1,9 @@
 ﻿namespace CSATM.Backend
 {
-    public class Bank
+    public class Bank(string name)
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = name;
 
-        public List<Account> Accounts { get; set; }
+        public List<Account> Accounts { get; } = [];
     }
 }
