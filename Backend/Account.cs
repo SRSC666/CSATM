@@ -1,5 +1,12 @@
 ﻿namespace CSATM.Backend
 {
+    /// <summary>
+    /// 银行账户
+    /// </summary>
+    /// <param name="bankName"></param>
+    /// <param name="number"></param>
+    /// <param name="username"></param>
+    /// <param name="password"></param>
     public class Account(string bankName, string number, string username, string password)
     {
         /// <summary>

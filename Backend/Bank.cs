@@ -1,5 +1,9 @@
 ﻿namespace CSATM.Backend
 {
+    /// <summary>
+    /// 银行
+    /// </summary>
+    /// <param name="name"></param>
     public class Bank(string name)
     {
         /// <summary>

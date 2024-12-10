@@ -1,5 +1,8 @@
 ﻿namespace CSATM.Backend
 {
+    /// <summary>
+    /// ATM机
+    /// </summary>
     public class ATM
     {
         /// <summary>

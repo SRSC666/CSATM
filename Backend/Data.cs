@@ -1,5 +1,8 @@
 ﻿namespace CSATM.Backend
 {
+    /// <summary>
+    /// 银行数据
+    /// </summary>
     public class Data
     {
         /// <summary>
