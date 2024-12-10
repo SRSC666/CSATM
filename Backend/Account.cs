@@ -1,8 +1,9 @@
 ﻿namespace CSATM.Backend
 {
-    public class Account(string number, string username, string password)
+    public class Account(string bankName, string number, string username, string password)
     {
-        public string Number { get; set; } = number;
+        public string BankName { get; } = bankName;
+        public string Number { get; } = number;
 
         public string Username { get; set; } = username;
         public string Password { get; set; } = password;
