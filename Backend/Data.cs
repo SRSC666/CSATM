@@ -38,22 +38,8 @@ namespace CSATM.Backend
         /// </summary>
         public static void SaveBankData()
         {
-            StreamWriter writer = null;
-
-            try
-            {
-                writer = new StreamWriter(FileName);
-                string jsonOfBanks = JsonSerializer.Serialize(Banks, SerializerOptions);
-                writer.Write(jsonOfBanks);
-            }
-            finally
-            {
-                try
-                {
-                    writer.Close();
-                }
-                catch { }
-            }
+            string jsonOfBanks = JsonSerializer.Serialize(Banks, SerializerOptions);
+            File.WriteAllText(FileName, jsonOfBanks);
         }
     }
 }
