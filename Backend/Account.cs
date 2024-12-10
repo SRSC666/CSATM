@@ -2,8 +2,11 @@
 {
     public class Account
     {
-        public string AccountNumber { get; set; }
-        public string AccountName { get; set; }
+        public string Number { get; set; }
+
+        public string Username { get; set; }
         public string Password { get; set; }
+
+        public decimal Balance { get; set; }
     }
 }
