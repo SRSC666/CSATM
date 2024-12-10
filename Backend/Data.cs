@@ -1,4 +1,6 @@
-﻿namespace CSATM.Backend
+﻿using System.Text.Json;
+
+namespace CSATM.Backend
 {
     /// <summary>
     /// 银行数据
@@ -16,6 +18,14 @@
         public static List<Bank> Banks { get; } = [];
 
         /// <summary>
+        /// 序列化选项
+        /// </summary>
+        public static JsonSerializerOptions SerializerOptions { get; } = new()
+        {
+            WriteIndented = true
+        };
+
+        /// <summary>
         /// 读取银行数据
         /// </summary>
         public static void LoadBankData()
@@ -28,7 +38,22 @@
         /// </summary>
         public static void SaveBankData()
         {
+            StreamWriter writer = null;
 
+            try
+            {
+                writer = new StreamWriter(FileName);
+                string jsonOfBanks = JsonSerializer.Serialize(Banks, SerializerOptions);
+                writer.Write(jsonOfBanks);
+            }
+            finally
+            {
+                try
+                {
+                    writer.Close();
+                }
+                catch { }
+            }
         }
     }
 }
