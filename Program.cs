@@ -1,3 +1,5 @@
+using CSATM.Front;
+
 namespace CSATM
 {
     public static class Program

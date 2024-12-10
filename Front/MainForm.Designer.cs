@@ -1,4 +1,4 @@
-﻿namespace CSATM
+﻿namespace CSATM.Front
 {
     partial class MainForm
     {
