@@ -1,3 +1,4 @@
+using CSATM.Backend;
 using CSATM.Front;
 
 namespace CSATM
@@ -7,6 +8,8 @@ namespace CSATM
         [STAThread]
         public static void Main(string[] args)
         {
+            Data.LoadBankData();
+
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
         }

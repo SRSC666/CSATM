@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Collections.Generic;
+using System.Text.Json;
 
 namespace CSATM.Backend
 {
@@ -30,7 +31,10 @@ namespace CSATM.Backend
         /// </summary>
         public static void LoadBankData()
         {
+            Banks.Clear();
 
+            string jsonOfBanks = File.ReadAllText(FileName);
+            Banks.AddRange(JsonSerializer.Deserialize<IEnumerable<Bank>>(jsonOfBanks));
         }
 
         /// <summary>
