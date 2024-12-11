@@ -32,6 +32,7 @@ namespace CSATM.Backend
         {
             Banks.Clear();
 
+            //通过读取Json数据，然后反序列化为银行数据
             string jsonOfBanks = File.ReadAllText(FileName);
             Banks.AddRange(JsonSerializer.Deserialize<IEnumerable<Bank>>(jsonOfBanks));
         }
@@ -41,6 +42,7 @@ namespace CSATM.Backend
         /// </summary>
         public static void SaveBankData()
         {
+            //将银行数据序列化为Json
             string jsonOfBanks = JsonSerializer.Serialize(Banks, SerializerOptions);
             File.WriteAllText(FileName, jsonOfBanks);
         }
