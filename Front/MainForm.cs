@@ -23,6 +23,10 @@ namespace CSATM.Front
             mainMenuControl = new();
             adminControl = new();
 
+            mainMenuControl.ButtonAdminClick += () => {
+                ChangeToPage(adminControl);
+            };
+
             ChangeToPage(mainMenuControl);
         }
 
