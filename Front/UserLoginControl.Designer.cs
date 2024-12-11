@@ -31,8 +31,8 @@
             labelBankName = new Label();
             panel1 = new Panel();
             buttonBack = new Button();
-            buttonSignup = new Button();
             buttonLogin = new Button();
+            buttonSignup = new Button();
             textBoxPassword = new TextBox();
             textBoxUsername = new TextBox();
             labelPassword = new Label();
@@ -58,8 +58,8 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(buttonBack);
-            panel1.Controls.Add(buttonSignup);
             panel1.Controls.Add(buttonLogin);
+            panel1.Controls.Add(buttonSignup);
             panel1.Controls.Add(textBoxPassword);
             panel1.Controls.Add(textBoxUsername);
             panel1.Controls.Add(labelPassword);
@@ -85,27 +85,27 @@
             buttonBack.Text = "返回";
             buttonBack.UseVisualStyleBackColor = true;
             // 
-            // buttonSignup
-            // 
-            buttonSignup.Anchor = AnchorStyles.None;
-            buttonSignup.Location = new Point(90, 200);
-            buttonSignup.Margin = new Padding(0);
-            buttonSignup.Name = "buttonSignup";
-            buttonSignup.Size = new Size(75, 30);
-            buttonSignup.TabIndex = 6;
-            buttonSignup.Text = "登录";
-            buttonSignup.UseVisualStyleBackColor = true;
-            // 
             // buttonLogin
             // 
             buttonLogin.Anchor = AnchorStyles.None;
-            buttonLogin.Location = new Point(10, 200);
+            buttonLogin.Location = new Point(90, 200);
             buttonLogin.Margin = new Padding(0);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(75, 30);
             buttonLogin.TabIndex = 6;
-            buttonLogin.Text = "注册";
+            buttonLogin.Text = "登录";
             buttonLogin.UseVisualStyleBackColor = true;
+            // 
+            // buttonSignup
+            // 
+            buttonSignup.Anchor = AnchorStyles.None;
+            buttonSignup.Location = new Point(10, 200);
+            buttonSignup.Margin = new Padding(0);
+            buttonSignup.Name = "buttonSignup";
+            buttonSignup.Size = new Size(75, 30);
+            buttonSignup.TabIndex = 6;
+            buttonSignup.Text = "注册";
+            buttonSignup.UseVisualStyleBackColor = true;
             // 
             // textBoxPassword
             // 
@@ -208,8 +208,8 @@
         private Label labelUsername;
         private TextBox textBoxPassword;
         private Label labelPassword;
-        private Button buttonLogin;
         private Button buttonSignup;
+        private Button buttonLogin;
         private Button buttonBack;
     }
 }

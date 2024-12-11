@@ -54,6 +54,13 @@
         /// <returns></returns>
         public static Result CreateAccount(string bankName, string number, string username, string password)
         {
+            if (bankName == null || number == null || username == null || password == null ||
+                bankName == string.Empty || number == string.Empty ||
+                username == string.Empty || password == string.Empty)
+            {
+                return Result.Failure("注册信息不能为空");
+            }
+
             Bank bank = Data.GetBank(bankName);
             if (bank == null)
             {
