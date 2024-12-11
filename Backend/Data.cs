@@ -30,11 +30,9 @@ namespace CSATM.Backend
         /// </summary>
         public static void LoadBankData()
         {
-            Banks.Clear();
-
             //通过读取Json数据，然后反序列化为银行数据
             string jsonOfBanks = File.ReadAllText(FileName);
-            Banks.AddRange(JsonSerializer.Deserialize<IEnumerable<Bank>>(jsonOfBanks));
+            Banks = JsonSerializer.Deserialize<List<Bank>>(jsonOfBanks);
         }
 
         /// <summary>
