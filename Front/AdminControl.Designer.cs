@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel = new Panel();
+            buttonBack = new Button();
+            buttonDelete = new Button();
             buttonAdd = new Button();
             textBoxBankName = new TextBox();
-            buttonDelete = new Button();
-            buttonBack = new Button();
             panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,6 +48,28 @@
             panel.Name = "panel";
             panel.Size = new Size(400, 100);
             panel.TabIndex = 0;
+            // 
+            // buttonBack
+            // 
+            buttonBack.Anchor = AnchorStyles.None;
+            buttonBack.Location = new Point(145, 60);
+            buttonBack.Margin = new Padding(0);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(100, 30);
+            buttonBack.TabIndex = 3;
+            buttonBack.Text = "返回";
+            buttonBack.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Anchor = AnchorStyles.None;
+            buttonDelete.Location = new Point(260, 20);
+            buttonDelete.Margin = new Padding(0);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(100, 30);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "删除银行";
+            buttonDelete.UseVisualStyleBackColor = true;
             // 
             // buttonAdd
             // 
@@ -69,28 +91,6 @@
             textBoxBankName.Name = "textBoxBankName";
             textBoxBankName.Size = new Size(120, 30);
             textBoxBankName.TabIndex = 0;
-            // 
-            // buttonDelete
-            // 
-            buttonDelete.Anchor = AnchorStyles.None;
-            buttonDelete.Location = new Point(260, 20);
-            buttonDelete.Margin = new Padding(0);
-            buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(100, 30);
-            buttonDelete.TabIndex = 2;
-            buttonDelete.Text = "删除银行";
-            buttonDelete.UseVisualStyleBackColor = true;
-            // 
-            // buttonBack
-            // 
-            buttonBack.Anchor = AnchorStyles.None;
-            buttonBack.Location = new Point(145, 60);
-            buttonBack.Margin = new Padding(0);
-            buttonBack.Name = "buttonBack";
-            buttonBack.Size = new Size(100, 30);
-            buttonBack.TabIndex = 3;
-            buttonBack.Text = "返回";
-            buttonBack.UseVisualStyleBackColor = true;
             // 
             // AdminControl
             // 
