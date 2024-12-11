@@ -3,6 +3,9 @@
     /// <summary>
     /// 操作结果
     /// </summary>
+    /// <param name="code"></param>
+    /// <param name="message"></param>
+    /// <param name="data"></param>
     public class Result(int code, string message, object data)
     {
         public int Code { get; } = code;
