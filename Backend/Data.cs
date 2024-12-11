@@ -44,5 +44,22 @@ namespace CSATM.Backend
             string jsonOfBanks = JsonSerializer.Serialize(Banks, SerializerOptions);
             File.WriteAllText(FileName, jsonOfBanks);
         }
+
+        /// <summary>
+        /// 获取银行账户
+        /// </summary>
+        /// <param name="bankName"></param>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static Account GetAccount(string bankName, string number)
+        {
+            Bank bank = Banks.FirstOrDefault(b => b.Name == bankName);
+            if (bank == null)
+            {
+                return null;
+            }
+
+            return bank.Accounts.FirstOrDefault(a => a.Number == number);
+        }
     }
 }
