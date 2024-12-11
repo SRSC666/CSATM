@@ -33,5 +33,15 @@
             CurrentAccount = account;
             return Result.Success();
         }
+
+        /// <summary>
+        /// 退出登录
+        /// </summary>
+        /// <returns></returns>
+        public static Result Logout()
+        {
+            CurrentAccount = null;
+            return Result.Success();
+        }
     }
 }
