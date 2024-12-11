@@ -43,5 +43,13 @@
             CurrentAccount = null;
             return Result.Success();
         }
+
+        /// <summary>
+        /// 存钱
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public static Result SaveMoney(decimal amount) =>
+            CurrentAccount != null ? SaveMoney(amount) : Result.Failure("用户未登录");
     }
 }

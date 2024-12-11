@@ -31,5 +31,16 @@
         /// 余额
         /// </summary>
         public decimal Balance { get; set; }
+
+        /// <summary>
+        /// 存钱
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public Result SaveMoney(decimal amount)
+        {
+            Balance += amount;
+            return Result.Success();
+        }
     }
 }
