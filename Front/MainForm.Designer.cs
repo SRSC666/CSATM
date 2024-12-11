@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panelMain = new Panel();
             SuspendLayout();
+            // 
+            // panelMain
+            // 
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 0);
+            panelMain.Margin = new Padding(0);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(800, 600);
+            panelMain.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
+            Controls.Add(panelMain);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CSATM";
@@ -42,5 +53,7 @@
         }
 
         #endregion
+
+        private Panel panelMain;
     }
 }
