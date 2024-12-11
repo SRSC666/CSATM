@@ -45,6 +45,33 @@
         }
 
         /// <summary>
+        /// 创建账户
+        /// </summary>
+        /// <param name="bankName"></param>
+        /// <param name="number"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static Result CreateAccount(string bankName, string number, string username, string password)
+        {
+            Bank bank = Data.GetBank(bankName);
+            if (bank == null)
+            {
+                return Result.Failure("银行不存在");
+            }
+
+            Account account = Data.GetAccount(bankName, number);
+            if (account != null)
+            {
+                return Result.Failure("账户已经存在");
+            }
+
+            account = new(bankName, number, username, password);
+            bank.Accounts.Add(account);
+            return Result.Success();
+        }
+
+        /// <summary>
         /// 存钱
         /// </summary>
         /// <param name="amount"></param>
