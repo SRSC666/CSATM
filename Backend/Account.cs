@@ -49,7 +49,6 @@ namespace CSATM.Backend
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public virtual Result WithdrawMoney(decimal amount)
         {
             if (Balance - amount > 0)
