@@ -5,6 +5,7 @@ namespace CSATM.Front
     public partial class MainForm : Form
     {
         private MainMenuControl mainMenuControl;
+        private AdminControl adminControl;
 
         public MainForm()
         {
@@ -20,6 +21,8 @@ namespace CSATM.Front
             };
 
             mainMenuControl = new();
+            adminControl = new();
+
             ChangeToPage(mainMenuControl);
         }
 
