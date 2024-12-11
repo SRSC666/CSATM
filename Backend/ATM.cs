@@ -17,7 +17,7 @@
         /// <param name="number"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public static Result Login(string bankName, string number, string password)
+        public static Result Login(string bankName, string number, string username, string password)
         {
             Account account = Data.GetAccount(bankName, number);
             if (account == null)
@@ -25,6 +25,10 @@
                 return Result.Failure("该账户不存在");
             }
 
+            if (username != account.Username)
+            {
+                return Result.Failure("用户名错误");
+            }
             if (password != account.Password)
             {
                 return Result.Failure("密码错误");

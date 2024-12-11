@@ -40,6 +40,10 @@ namespace CSATM.Backend
         /// <returns></returns>
         public Result SaveMoney(decimal amount)
         {
+            if (amount <= 0)
+            {
+                return Result.Failure("数值必须大于0");
+            }
             Balance += amount;
             return Result.Success();
         }
@@ -51,6 +55,11 @@ namespace CSATM.Backend
         /// <returns></returns>
         public virtual Result WithdrawMoney(decimal amount)
         {
+            if (amount <= 0)
+            {
+                return Result.Failure("数值必须大于0");
+            }
+
             if (Balance - amount > 0)
             {
                 Balance -= amount;

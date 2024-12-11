@@ -12,16 +12,16 @@ namespace CSATM.Front
         public MainForm()
         {
             InitializeComponent();
-            InitializeForm();
-        }
+            InitializeUserControl();
 
-        private void InitializeForm()
-        {
             FormClosing += (sender, e) =>
             {
                 Data.SaveBankData();
             };
+        }
 
+        private void InitializeUserControl()
+        {
             mainMenuControl = new();
             mainMenuControl.ButtonAdminClick += () =>
             {
@@ -43,8 +43,17 @@ namespace CSATM.Front
             {
                 ChangeToPage(mainMenuControl);
             };
+            userLoginControl.ButtonForwardClick += () =>
+            {
+                ChangeToPage(atmControl);
+            };
 
             atmControl = new();
+            atmControl.ButtonExitClick += () =>
+            {
+                ATM.Logout();
+                ChangeToPage(userLoginControl);
+            };
 
             ChangeToPage(mainMenuControl);
         }
