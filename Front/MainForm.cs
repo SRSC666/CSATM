@@ -7,6 +7,7 @@ namespace CSATM.Front
         private MainMenuControl mainMenuControl;
         private AdminControl adminControl;
         private UserLoginControl userLoginControl;
+        private ATMControl atmControl;
 
         public MainForm()
         {
@@ -42,6 +43,8 @@ namespace CSATM.Front
             {
                 ChangeToPage(mainMenuControl);
             };
+
+            atmControl = new();
 
             ChangeToPage(mainMenuControl);
         }
