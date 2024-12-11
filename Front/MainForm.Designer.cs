@@ -33,7 +33,7 @@
             // 
             // panelMain
             // 
-            panelMain.Dock = DockStyle.Fill;
+            panelMain.Anchor = AnchorStyles.None;
             panelMain.Location = new Point(0, 0);
             panelMain.Margin = new Padding(0);
             panelMain.Name = "panelMain";
