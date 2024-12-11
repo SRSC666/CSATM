@@ -8,9 +8,9 @@
     /// <param name="data"></param>
     public class Result(int code, string message, object data)
     {
-        public int Code { get; } = code;
-        public string Message { get; } = message;
-        public object Data { get; } = data;
+        public int Code { get; set; } = code;
+        public string Message { get; set; } = message;
+        public object Data { get; set; } = data;
 
         public static Result Success() => new(1, "Success", null);
         public static Result Success(object data) => new(1, "Success", data);

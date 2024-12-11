@@ -15,12 +15,12 @@ namespace CSATM.Backend
         /// <summary>
         /// 银行表
         /// </summary>
-        public static List<Bank> Banks { get; } = [];
+        public static List<Bank> Banks { get; set; } = [];
 
         /// <summary>
         /// 序列化选项
         /// </summary>
-        public static JsonSerializerOptions SerializerOptions { get; } = new()
+        public static JsonSerializerOptions SerializerOptions { get; set; } = new()
         {
             WriteIndented = true
         };

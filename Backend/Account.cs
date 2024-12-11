@@ -12,11 +12,11 @@
         /// <summary>
         /// 银行名
         /// </summary>
-        public string BankName { get; } = bankName;
+        public string BankName { get; set; } = bankName;
         /// <summary>
         /// 卡号
         /// </summary>
-        public string Number { get; } = number;
+        public string Number { get; set; } = number;
 
         /// <summary>
         /// 用户姓名

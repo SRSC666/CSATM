@@ -14,6 +14,6 @@
         /// <summary>
         /// 账户表
         /// </summary>
-        public List<Account> Accounts { get; } = [];
+        public List<Account> Accounts { get; set; } = [];
     }
 }
