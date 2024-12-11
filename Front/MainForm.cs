@@ -6,6 +6,7 @@ namespace CSATM.Front
     {
         private MainMenuControl mainMenuControl;
         private AdminControl adminControl;
+        private UserLoginControl userLoginControl;
 
         public MainForm()
         {
@@ -21,14 +22,23 @@ namespace CSATM.Front
             };
 
             mainMenuControl = new();
-            adminControl = new();
-
             mainMenuControl.ButtonAdminClick += () =>
             {
                 ChangeToPage(adminControl);
             };
+            mainMenuControl.ButtonUserClick += () =>
+            {
+                ChangeToPage(userLoginControl);
+            };
 
+            adminControl = new();
             adminControl.ButtonBackClick += () =>
+            {
+                ChangeToPage(mainMenuControl);
+            };
+
+            userLoginControl = new();
+            userLoginControl.ButtonBackClick += () =>
             {
                 ChangeToPage(mainMenuControl);
             };
