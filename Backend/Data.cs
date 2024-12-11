@@ -46,20 +46,20 @@ namespace CSATM.Backend
         }
 
         /// <summary>
+        /// 获取银行
+        /// </summary>
+        /// <param name="bankName"></param>
+        /// <returns></returns>
+        public static Bank GetBank(string bankName) =>
+            Banks.FirstOrDefault(b => b.Name == bankName);
+
+        /// <summary>
         /// 获取银行账户
         /// </summary>
         /// <param name="bankName"></param>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static Account GetAccount(string bankName, string number)
-        {
-            Bank bank = Banks.FirstOrDefault(b => b.Name == bankName);
-            if (bank == null)
-            {
-                return null;
-            }
-
-            return bank.Accounts.FirstOrDefault(a => a.Number == number);
-        }
+        public static Account GetAccount(string bankName, string number) =>
+            GetBank(bankName)?.Accounts.FirstOrDefault(a => a.Number == number);
     }
 }
