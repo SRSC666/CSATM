@@ -21,5 +21,27 @@
             Data.Banks.Add(bank);
             return Result.Success();
         }
+
+        /// <summary>
+        /// 删除银行
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static Result DeleteBank(string name)
+        {
+            Bank bank = Data.GetBank(name);
+            if (bank == null)
+            {
+                return Result.Failure("银行不存在");
+            }
+
+            if (bank.Accounts.Count > 0)
+            {
+                return Result.Failure("该银行下有账户，不能删除");
+            }
+
+            Data.Banks.Remove(bank);
+            return Result.Success();
+        }
     }
 }
