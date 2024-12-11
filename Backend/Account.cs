@@ -55,7 +55,9 @@ namespace CSATM.Backend
             if (Balance - amount > 0)
             {
                 Balance -= amount;
-                return Result.Success();
+                return amount >= 10000m ?
+                    Result.Success(new BigMoneyArgs(Number, amount)) :
+                    Result.Success();
             }
 
             return Result.Failure("余额不足");
