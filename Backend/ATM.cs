@@ -50,6 +50,14 @@
         /// <param name="amount"></param>
         /// <returns></returns>
         public static Result SaveMoney(decimal amount) =>
-            CurrentAccount != null ? SaveMoney(amount) : Result.Failure("用户未登录");
+            CurrentAccount != null ? CurrentAccount.SaveMoney(amount) : Result.Failure("用户未登录");
+
+        /// <summary>
+        /// 取钱
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public static Result WithdrawMoney(decimal amount) =>
+            CurrentAccount != null ? CurrentAccount.WithdrawMoney(amount) : Result.Failure("用户未登录");
     }
 }

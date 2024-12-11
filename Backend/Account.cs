@@ -1,4 +1,5 @@
-﻿namespace CSATM.Backend
+﻿
+namespace CSATM.Backend
 {
     /// <summary>
     /// 银行账户
@@ -41,6 +42,23 @@
         {
             Balance += amount;
             return Result.Success();
+        }
+
+        /// <summary>
+        /// 取钱
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public virtual Result WithdrawMoney(decimal amount)
+        {
+            if (Balance - amount > 0)
+            {
+                Balance -= amount;
+                return Result.Success();
+            }
+
+            return Result.Failure("余额不足");
         }
     }
 }
