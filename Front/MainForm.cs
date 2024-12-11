@@ -1,3 +1,5 @@
+using CSATM.Backend;
+
 namespace CSATM.Front
 {
     public partial class MainForm : Form
@@ -5,6 +7,11 @@ namespace CSATM.Front
         public MainForm()
         {
             InitializeComponent();
+
+            FormClosing += (sender, e) =>
+            {
+                Data.SaveBankData();
+            };
         }
     }
 }
